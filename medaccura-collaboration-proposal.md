@@ -6,7 +6,9 @@ Tim,
 
 Cold email, respect for your time so I'll keep this to the point.
 
-You built MedAccura: an AI that answers clinical guideline questions at the bedside. I built the **EHDS Integration Hub** ([github.com/ma3u/MinimumViableHealthDataspacev2](https://github.com/ma3u/MinimumViableHealthDataspacev2), live at [ehds.mabu.red](https://ehds.mabu.red)): a running reference implementation of the European Health Data Space — Eclipse EDC-V, DSP 2025-1, DCP v1.0, FHIR R4, OMOP CDM, HealthDCAT-AP, EEHRxF, full HDAB approval flow. 1490 tests at 94% coverage, 127 synthetic Synthea patients loaded, live cross-border demo running today between a simulated Berlin Clinic, Amsterdam CRO, and German HDAB.
+You built MedAccura: an AI that answers clinical guideline questions at the bedside. I built the **EHDS Integration Hub** ([github.com/ma3u/MinimumViableHealthDataspacev2](https://github.com/ma3u/MinimumViableHealthDataspacev2), live at [ehds.mabu.red](https://ehds.mabu.red)): an integration platform and GraphRAG for the European Health Data Space — Eclipse EDC-V, DSP 2025-1, DCP v1.0, FHIR R4, OMOP CDM, HealthDCAT-AP, EEHRxF, full HDAB approval flow, 1490 tests at 94% coverage, massive-scale synthetic cohorts, live cross-border demo running today between a simulated Berlin Clinic, Amsterdam CRO, and German HDAB.
+
+Technically, the Hub is the same retrieval-and-generation pattern as MedAccura — but over a federated 5-layer health knowledge graph instead of guideline PDFs, with natural-language-to-Cypher traversal across multiple participant graph DBs, live EEHRxF compliance checks, and a researcher-facing query surface. Peer system at a different layer of the data stack, not rails underneath it.
 
 Our two projects look adjacent and non-overlapping to me. You own the clinician-facing UX on top of unstructured PDFs. I own the compliant data-exchange layer that EHDS mandates from 2029 onward. Together they become an **EHDS-native clinical decision-support layer** neither of us can credibly build alone. The category exists on slides — it doesn't exist in running software yet. That window is open for maybe 12 months.
 
